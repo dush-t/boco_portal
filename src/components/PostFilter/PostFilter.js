@@ -4,7 +4,7 @@ import { Filter, ReferenceInput, SelectInput, TextInput, List } from 'react-admi
 const postFilter = (props) => (
     <Filter {...props}>
         <TextInput label="Search" source="q" alwaysOn />
-        <ReferenceInput label="User" source="userId" reference="users" allowEmpty>
+        <ReferenceInput label="Sport" source="id" reference="sports" allowEmpty alwaysOn>
             <SelectInput optionText="name" />
         </ReferenceInput>
     </Filter>
