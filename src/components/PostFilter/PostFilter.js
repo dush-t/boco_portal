@@ -1,5 +1,5 @@
 import React from 'react';
-import { Filter, ReferenceInput, SelectInput, TextInput, List } from 'react-admin';
+import { Filter, ReferenceInput, SelectInput, TextInput} from 'react-admin';
 
 const postFilter = (props) => (
     <Filter {...props}>

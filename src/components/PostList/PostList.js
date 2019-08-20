@@ -1,5 +1,5 @@
 import React from 'react';
-import { List, Datagrid, TextField, ReferenceField } from 'react-admin';
+import { List, Datagrid, TextField, ReferenceField, EditButton } from 'react-admin';
 
 import PostFilter from '../PostFilter/PostFilter';
 
@@ -23,6 +23,7 @@ const postList = (props) => (
             <ReferenceField source="team2" reference="colleges">
                 <TextField source="short_name" />
             </ReferenceField>
+            <EditButton />
         </Datagrid>
     </List>
 );
