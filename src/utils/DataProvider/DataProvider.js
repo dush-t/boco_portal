@@ -11,7 +11,7 @@ import {
 
 import { stringify } from 'query-string'
 
-const API_URL = 'http://localhost:8000/boco_portal'
+const API_URL = 'http://127.0.0.1:8000/boco_portal'
 
 const convertDataProviderRequestToHTTP = (type, resource, params) => {
     switch (type) {
