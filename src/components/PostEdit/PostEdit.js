@@ -1,5 +1,7 @@
 import React, { Fragment } from 'react';
 import { Edit, SimpleForm, DisabledInput, ReferenceInput, SelectInput, TextInput, BooleanInput, AutocompleteInput, FormDataConsumer } from 'react-admin'
+import DateFnsUtils from '@date-io/date-fns';
+import { DateTimeInput } from 'react-admin-date-inputs';
 
 // Has to be hardcoded before the fest, for performance reasons.
 const getSportLayoutNumber = (sport_id) => {
@@ -21,6 +23,15 @@ const postEdit = (props) => (
                 <SelectInput optionText="name" /> 
             </ReferenceInput>
             <TextInput source="venue" />
+            <DateTimeInput 
+                source="timestamp" 
+                label="Timing" 
+                options={{ 
+                    format: 'dd/MM/yyyy, HH:mm', 
+                    ampm: false, 
+                    clearable: true,
+                    variant: "inline"
+                }} />
             <SelectInput source="gender" choices={[
                 {id: 'M', name: 'M'},
                 {id: 'F', name: 'F'}

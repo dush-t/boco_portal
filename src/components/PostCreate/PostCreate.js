@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Create, SimpleForm, DisabledInput, ReferenceInput, SelectInput, TextInput, BooleanInput, FormDataConsumer, AutocompleteInput } from 'react-admin'
+import { Create, SimpleForm, DisabledInput, ReferenceInput, SelectInput, TextInput, BooleanInput, FormDataConsumer, AutocompleteInput, DateTimeInput } from 'react-admin'
 
 const getSportLayoutNumber = (sport_id) => {
     const layoutArray1 = [1]
@@ -19,6 +19,7 @@ const postCreate = (props) => (
                 <SelectInput optionText="name" /> 
             </ReferenceInput>
             <TextInput source="venue" />
+            <DateTimeInput source="timestamp" />
             <SelectInput source="gender" choices={[
                 {id: 'M', name: 'M'},
                 {id: 'F', name: 'F'}
