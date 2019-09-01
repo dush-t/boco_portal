@@ -11,7 +11,7 @@ import {
 
 import { stringify } from 'query-string'
 
-const API_URL = 'http://172.17.65.149:8000/boco_portal'
+const API_URL = 'http://appd.bits-dvm.org:8000/boco_portal'
 
 const convertDataProviderRequestToHTTP = (type, resource, params) => {
     const token = localStorage.getItem('token') || '';
