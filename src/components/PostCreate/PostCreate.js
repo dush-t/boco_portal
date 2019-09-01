@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import { Create, SimpleForm, DisabledInput, ReferenceInput, SelectInput, TextInput, BooleanInput, FormDataConsumer, AutocompleteInput } from 'react-admin'
+import { Typography } from '@material-ui/core';
 import { DateTimeInput } from 'react-admin-date-inputs';
 
 const getSportLayoutNumber = (sport_id) => {
@@ -12,8 +13,17 @@ const getSportLayoutNumber = (sport_id) => {
     }
 }
 
+const Aside = () => (
+    <div style={{ width: 200, margin: '1em' }}>
+        <Typography variant="title">Note</Typography>
+        <Typography variant="body1">
+            Enter the information and click on save. You can add more data after that.
+        </Typography>
+    </div>
+);
+
 const postCreate = (props) => (
-    <Create {...props}>
+    <Create {...props} aside={<Aside />}>
         <SimpleForm>
         <DisabledInput source="id" />
             <ReferenceInput label="Sport" source="sport" reference="sports">
