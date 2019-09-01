@@ -15,11 +15,15 @@ import EventIcon from '@material-ui/icons/EventNote';
 import dataProvider from './utils/DataProvider/DataProvider';
 
 import authProvider from './utils/AuthProvider/AuthProvider';
+import MiscEventList from './components/MiscEventList/MiscEventList';
+import MiscEventEdit from './components/MiscEventEdit/MiscEventEdit';
+import MiscEventCreate from './components/MiscEventCreate/MiscEventCreate';
 // const dataProvider = jsonServerProvider('http://127.0.0.1:8000/boco_portal');
 
 const App = () => (
         <Admin authProvider={authProvider} dashboard={Dashboard} dataProvider={dataProvider}>
             <Resource name="rounds" list={PostList} edit={PostEdit} create={PostCreate} icon={EventIcon} />
+            <Resource name="events" list={MiscEventList} edit={MiscEventEdit} create={MiscEventCreate} />
             <Resource name="sports" list={ListGuesser} icon={SportIcon} />
             <Resource name="colleges" list={ListGuesser} edit={EditGuesser} create={CollegeCreate} icon={CollegeIcon} />
         </Admin>
