@@ -4,12 +4,11 @@ import { Typography } from '@material-ui/core';
 import { DateTimeInput } from 'react-admin-date-inputs';
 
 const getSportLayoutNumber = (sport_id) => {
-    const layoutArray1 = [1]
-    const layoutArray2 = [2]
-    if (layoutArray1.includes(sport_id)) {
-        return 1
-    } else if (layoutArray2.includes(sport_id)) {
+    const layoutArray2 = [2, 9, 8, 7]
+    if (layoutArray2.includes(sport_id)) {
         return 2
+    } else {
+        return 1
     }
 }
 
@@ -29,7 +28,10 @@ const postCreate = (props) => (
             <ReferenceInput label="Sport" source="sport" reference="sports">
                 <SelectInput optionText="name" /> 
             </ReferenceInput>
-            <TextInput source="venue" />
+            <ReferenceInput label="Venue" source="venue" reference="venues">
+                <SelectInput optionText="name" /> 
+            </ReferenceInput>
+            {/* <TextInput source="venue" /> */}
             <DateTimeInput label="Scheduled time" source="timestamp" />
             <SelectInput source="gender" choices={[
                 {id: 'M', name: 'M'},

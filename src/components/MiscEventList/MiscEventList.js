@@ -1,5 +1,5 @@
 import React from 'react';
-import { List, Datagrid, TextField, DateField, EditButton } from 'react-admin';
+import { List, Datagrid, TextField, DateField, EditButton, ReferenceField } from 'react-admin';
 
 // import PostFilter from '../PostFilter/PostFilter';
 
@@ -9,7 +9,10 @@ const miscEventList = (props) => (
             <TextField source="name" />
             <TextField source="day" />
             <DateField source="timestamp" showTime />
-            <TextField source="venue" />
+            <ReferenceField source="venue" reference="venues">
+                <TextField source="name" />
+            </ReferenceField>
+            {/* <TextField source="venue" /> */}
             <TextField source="organiser" />
             <EditButton />
         </Datagrid>

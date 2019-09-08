@@ -18,7 +18,10 @@ import authProvider from './utils/AuthProvider/AuthProvider';
 import MiscEventList from './components/MiscEventList/MiscEventList';
 import MiscEventEdit from './components/MiscEventEdit/MiscEventEdit';
 import MiscEventCreate from './components/MiscEventCreate/MiscEventCreate';
-// const dataProvider = jsonServerProvider('http://127.0.0.1:8000/boco_portal');
+
+import VenueList from './components/VenueList/VenueList';
+import VenueEdit from './components/VenueEdit/VenueEdit';
+import VenueCreate from './components/VenueCreate/VenueCreate';
 
 const App = () => (
         <Admin authProvider={authProvider} dashboard={Dashboard} dataProvider={dataProvider}>
@@ -26,6 +29,7 @@ const App = () => (
             <Resource name="events" list={MiscEventList} edit={MiscEventEdit} create={MiscEventCreate} />
             <Resource name="sports" list={ListGuesser} icon={SportIcon} />
             <Resource name="colleges" list={ListGuesser} edit={EditGuesser} create={CollegeCreate} icon={CollegeIcon} />
+            <Resource name="venues" list={VenueList} edit={VenueEdit} create={VenueCreate} />
         </Admin>
     );
 

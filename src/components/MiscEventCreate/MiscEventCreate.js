@@ -1,5 +1,5 @@
 import React from 'react';
-import { Create, SimpleForm, TextInput, NumberInput, LongTextInput } from 'react-admin'
+import { Create, SimpleForm, TextInput, NumberInput, LongTextInput, ReferenceInput, SelectInput } from 'react-admin'
 import { DateTimeInput } from 'react-admin-date-inputs';
 
 const miscEventCreate = (props) => (
@@ -17,7 +17,10 @@ const miscEventCreate = (props) => (
                     clearable: true,
                     variant: "inline"
                 }} />
-            <TextInput source="venue" />
+            {/* <TextInput source="venue" /> */}
+            <ReferenceInput label="Venue" source="venue" reference="venues">
+                <SelectInput optionText="name" /> 
+            </ReferenceInput>
             <TextInput source="organiser" />
         </SimpleForm>
     </Create>

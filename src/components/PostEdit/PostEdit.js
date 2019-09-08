@@ -5,12 +5,11 @@ import { DateTimeInput } from 'react-admin-date-inputs';
 
 // Has to be hardcoded before the fest, for performance reasons.
 const getSportLayoutNumber = (sport_id) => {
-    const layoutArray1 = [1]
-    const layoutArray2 = [2]
-    if (layoutArray1.includes(sport_id)) {
-        return 1
-    } else if (layoutArray2.includes(sport_id)) {
+    const layoutArray2 = [2, 9, 7, 8]
+    if (layoutArray2.includes(sport_id)) {
         return 2
+    } else {
+        return 1
     }
 }
 
@@ -22,7 +21,10 @@ const postEdit = (props) => (
             <ReferenceInput label="Sport" source="sport" reference="sports">
                 <SelectInput optionText="name" /> 
             </ReferenceInput>
-            <TextInput source="venue" />
+            <ReferenceInput label="Venue" source="venue" reference="venues">
+                <SelectInput optionText="name" /> 
+            </ReferenceInput>
+            {/* <TextInput source="venue" /> */}
             <DateTimeInput 
                 source="timestamp" 
                 label="Timing" 

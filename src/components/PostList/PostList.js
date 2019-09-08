@@ -14,8 +14,11 @@ const postList = (props) => (
                 <TextField source="name" />
             </ReferenceField>
             <TextField source="gender" />
-            <TextField source="venue" />
-            <DateField source="timestamp" showTime />
+            {/* <TextField source="venue" /> */}
+            <ReferenceField source="venue" reference="venues">
+                <TextField source="name" />
+            </ReferenceField>
+            <DateField source="timestamp" showTime  options={{ day: 'numeric', hour: 'numeric', minute: 'numeric' }}/>
             <TextField source="round_name" />
             <TextField source="round_type" />
             <ReferenceField source="team1" reference="colleges">
