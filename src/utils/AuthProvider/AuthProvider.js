@@ -1,6 +1,6 @@
 import { AUTH_LOGIN, AUTH_LOGOUT, AUTH_ERROR, AUTH_CHECK } from 'react-admin';
 
-const API_URL = 'http://172.17.65.149:8000/boco_portal'
+const API_URL = 'https://www.bits-bosm.org/boco_portal'
 
 export default async (type, params) => {
     // called when the user attempts to log in

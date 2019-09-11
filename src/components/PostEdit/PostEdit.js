@@ -36,7 +36,8 @@ const postEdit = (props) => (
                 }} />
             <SelectInput source="gender" choices={[
                 {id: 'M', name: 'M'},
-                {id: 'F', name: 'F'}
+                {id: 'F', name: 'F'},
+                {id: 'B', name: 'B'}
             ]} />
             <TextInput source="round_name" />
             <TextInput source="round_type" />
