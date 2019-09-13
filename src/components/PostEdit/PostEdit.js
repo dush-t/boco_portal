@@ -57,7 +57,7 @@ const postEdit = (props) => (
                             <AutocompleteInput optionText="short_name"/>
                         </ReferenceInput>
                         <ReferenceInput label="Team 2" source="team2" reference="colleges">
-                            <AutocompleteInput optionText="name"/>
+                            <AutocompleteInput optionText="short_name"/>
                         </ReferenceInput>
                     </Fragment>
                 }
